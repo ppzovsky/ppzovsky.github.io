@@ -1,0 +1,85 @@
+.navigation{
+    display: flex;
+    position: absolute;
+    z-index: 8;
+    top: 20px;
+    left: 30px;
+  }
+
+  .navigation span{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  .night-mode {
+
+color: #ddd;
+background-color: #222;
+
+h2 {
+  color: #eee; 
+}
+.containerFotos img {
+  filter: grayscale(100%); 
+}
+.linkContato {
+  color: #ddd; 
+}
+.linkContato:hover {
+  color: #fff; 
+}
+.novoLogo img:hover {
+  filter: none; 
+}
+.primeiroContainer{
+    background-color: #272E43;
+}
+.container02{
+    background-color: #272E43;
+}
+.segundoContainer{
+  background-color: #394261;
+}
+.container03{
+  background-color: #394261;
+}
+.terceiroContainer{
+    background-color: #1E222C;
+}
+.caixaFotos{
+    background-color: #1E222C;
+}
+.containerFotos{
+    background-color: #1E222C;
+}
+.temaCentral{
+    background-color: #1E222C;
+}
+.etiquetaNav{
+    background-color: #1E222C;
+}
+.containerContato{
+    background-color: #1E222C;
+}
+.novoLogo{
+    filter: grayscale(100%);
+}
+.novoLogo img:hover{
+    filter: invert(100%);
+}
+
+.novoLogo:hover{
+    filter: invert(100%);
+}
+
+video{
+    filter: grayscale(100%);
+    opacity: 30%;
+}
+.container04{
+  background-color: #1E222C;
+}
+
+}
+
+  

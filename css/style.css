@@ -1,0 +1,376 @@
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap");
+
+:root {
+  --verdeEscuro: rgba(47, 61, 29, 0.9);
+  --verdeClaro: rgb(71, 91, 42);
+  --begeClaro: rgb(233, 240, 224);
+}
+
+/*-----video de fundo -----*/
+.containerPrincipal {
+  position: relative;
+  min-height: 100%;
+  width: 101vw;
+  z-index: 0;
+  position: fixed;
+}
+.videoBack {
+  position: fixed;
+  min-width: 100%;
+  z-index: 0;
+}
+/* -------------------------------------------------------------- */
+
+.primeiroContainer{
+  width: 100vw;
+  height: 20rem;
+  top: 32%;
+  background-color: var(--verdeEscuro);
+  position: absolute;
+  z-index: 1;
+}
+.navbar{
+  position: relative;
+  top: -10%;
+  display: flex;
+  justify-content:right;
+  
+}
+.etiquetaNav{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color:var(--begeClaro);
+  height: 15rem;
+  width: 6rem;
+  border-radius: 8px 8px 0 0;
+  margin-right: 40px;
+  transform: rotate(10deg);
+  transition: transform 0.4s ease-in-out;
+}
+.etiquetaNav a {
+  position: absolute;
+  font-family: "Vujahday Script", cursive;
+  font-size: larger;
+  margin-top: 20px;
+  text-decoration: none;
+  color: var(--verdeClaro); 
+}
+
+.segundoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.250);
+  width: 100%;
+  height: 14.750rem;
+  top: 14%;
+  background-color: var(--verdeClaro);
+  position: absolute;
+  z-index: 3;
+  font-optical-sizing: auto;
+}
+.temaCentral{
+  font-size: x-large;
+  text-align: center;
+  background-color: var(--begeClaro);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.438);
+  width: 30rem;
+  align-self: center;
+  border-radius: 15px;
+  padding: 1px;
+  margin-bottom: 10px;
+  font-family: "Vujahday Script", cursive;
+}
+.containerTodasFotos{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 100px;
+  margin-bottom: 4px;
+}
+.caixaFotos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--begeClaro);
+  height: 11rem;
+  width: 19rem;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.322);
+  transition: transform 0.4s ease-in-out;
+}
+.caixaFotos span{
+  font-family: "Vujahday Script", cursive;
+  font-size: x-large;
+}
+.imgInterna{
+  width: 97%;
+  height: 8rem;
+  border-radius: 5px 5px 0 0;
+  margin: 04px 5px;
+}
+
+.terceiroContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  width: 50%;
+  height: 120%;
+  top: -10%;
+  left: 25%;
+  background-color: var(--begeClaro);
+  position: absolute;
+  z-index: 2;
+}
+.novoLogo{
+  margin-top: -75px;
+  width: 230px;
+}
+.novoLogo img:hover{
+  filter: invert(100%);
+}
+.homenagem{
+  position: absolute;
+  text-decoration: none;
+  bottom: 5%;
+  right: 2%;
+  color: var(--begeClaro);
+  font-family: "Vujahday Script", cursive;
+}
+
+/* posicionamento das caixas em ângulos */
+.cx-1{
+  transform: rotate(4deg);
+}
+.cx-2{
+  transform: rotate(-4deg);
+}
+.cx-3{
+  transform: rotate(4deg);
+}
+
+/* animação */
+.caixaFotos:hover{
+  transform: scale(1.1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.etiquetaNav:hover{
+  transform: rotate(0deg);
+  transition: transform 0.4s ease-in-out;
+}
+
+.linkContato::after{
+  content: '';
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: var(--verdeEscuro);
+  transition: width .2s;
+}
+.linkContato:hover::after{
+  border-radius: 5px;
+  width: 100%;
+  color: var(--verdeEscuro);
+}
+.homenagem:hover{
+  color: var(--begeClaro);
+}
+
+@media (min-width: 1700px) {
+  .primeiroContainer{
+    height: 34rem;
+    top: 28%;
+    position: absolute;
+    z-index: 1;
+  }
+  .segundoContainer{
+    height: 24.750rem;
+  }
+  .caixaFotos{
+    height: 19rem;
+    width: 28rem;
+    margin-top: 10px;
+  }
+  .imgInterna{
+    height: 14rem;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1700px) {
+  .primeiroContainer{
+    height: 30rem;
+    top: 28%;
+    position: absolute;
+    z-index: 1;
+  }
+  .segundoContainer{
+    height: 22.750rem;
+  }
+  .caixaFotos{
+    height: 15rem;
+    width: 24rem;
+    margin-top: 10px;
+  }
+  .imgInterna{
+    height: 11rem;
+  }
+}
+
+@media (max-width: 1160px) {
+  .primeiroContainer{
+    height: 30rem;
+    top: 28%;
+    position: absolute;
+    z-index: 1;
+  }
+  .segundoContainer{
+    position: relative;
+    flex-wrap: wrap;
+    height: 21.750rem;
+  }
+  .caixaFotos{
+    height: 13rem;
+    width: 24rem;
+    margin: 10px;
+  }
+  .imgInterna{
+    height: 11rem;
+  }
+  .terceiroContainer{
+    height: 50rem;
+  }
+  .containerTodasFotos{
+    position: absolute;
+    top: 25%;
+  }
+  .temaCentral{
+    position: absolute;
+    font-size: x-large;
+    font-weight: bold;
+    width: 30rem;
+    top: 5%;
+  }
+  .navbar{
+    position: absolute;
+    top: 0%;
+  }
+  .cx-3{
+    transform: scale(1);
+  }
+  .terceiroContainer{
+    height: 750px;
+  }
+}
+
+@media (max-width: 1010px) {
+  .primeiroContainer{
+    height: 30rem;
+    top: 28%;
+    position: absolute;
+    z-index: 1;
+  }
+  .segundoContainer{
+    position: relative;
+    flex-wrap: wrap;
+    height: 21.750rem;
+  }
+  .caixaFotos{
+    height: 13rem;
+    width: 24rem;
+    margin: 10px;
+  }
+  .imgInterna{
+    height: 11rem;
+  }
+  .terceiroContainer{
+    height: 50rem;
+  }
+  .containerTodasFotos{
+    position: absolute;
+    top: 25%;
+  }
+  .temaCentral{
+    position: absolute;
+    font-size: x-large;
+    font-weight: bold;
+    width: 30rem;
+    top: 5%;
+  }
+  .navbar{
+    position: absolute;
+    top: 0%;
+  }
+  .cx-3{
+    transform: scale(1);
+  }
+  .terceiroContainer{
+    height: 950px;
+  }
+  .etiquetaNav{
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 429px) and (max-width: 930px) {
+    .terceiroContainer{
+      top: 1%;
+      width: 100vw;
+      height: 50rem;
+      margin: 0;
+    }
+    .containerTodasFotos{
+      position: absolute;
+      top: 25%;
+      right: 0%;
+      left: 0%;
+    }
+    .temaCentral{
+      position: absolute;
+      font-size: x-large;
+      font-weight: bold;
+      width: 25rem;
+      border-radius: 30px;
+      top: 5%;
+    }
+    .navbar{
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      top: -51%;
+      width: 100vw;
+      margin: 0;
+    }
+    .cx-3{
+      transform: scale(1);
+    }
+    .terceiroContainer{
+      height: 940px;
+      width: 300px;
+      left: 0%;
+      right: 0%;
+      width: 100vw;
+    }
+    .etiquetaNav{
+      margin-right: 0;
+      transform: rotate(0);
+      height: 80px;
+      width: 50vw;
+      border-radius: 0%;
+    }
+}
+
+
